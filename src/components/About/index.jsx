@@ -2,16 +2,18 @@ import React from "react";
 import { Container, Pic, SocialMedia, Icon } from "./styles";
 
 import { Title, Button, Information } from "../../styles";
-import Me from "../../../static/me.png";
-import Github from "../../../static/github.svg";
-import Instagram from "../../../static/instagram.svg";
-import Twitter from "../../../static/twitter.svg";
-import LinkedIn from "../../../static/linkedin.svg";
+import Me from "../../images/me.png";
+import Github from "../../images/github.svg";
+import Instagram from "../../images/instagram.svg";
+import Twitter from "../../images/twitter.svg";
+import LinkedIn from "../../images/linkedin.svg";
+import Image from "../Image";
 
 const About = () => {
   return (
     <Container>
       <Pic src={Me} />
+      <Image name="pickle" />
       <SocialMedia>
         <Icon src={LinkedIn} />
         <Icon src={Instagram} />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Logo, Menu } from "./styles";
-import burgerMenu from "../../../static/burgerMenu.svg";
+import burgerMenu from "../../images/burgerMenu.svg";
 
 const Nav = () => {
   return (

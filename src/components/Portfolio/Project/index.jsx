@@ -9,8 +9,8 @@ import {
   IconsContainer,
   Icon,
 } from "./styles";
-import Pickle from "../../../../static/pickle.png";
-import ReactIcon from "../../../../static/react.svg";
+import Pickle from "../../../images/pickle.png";
+import ReactIcon from "../../../images/react.svg";
 const Project = () => {
   return (
     <Container>

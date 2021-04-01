@@ -8,7 +8,7 @@ import {
   Text,
 } from "./styles";
 
-import ReactIcon from "../../../static/react.svg";
+import ReactIcon from "../../images/react.svg";
 const Technologies = () => {
   return (
     <Container>
