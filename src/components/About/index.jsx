@@ -1,13 +1,7 @@
 import React from "react";
-import {
-  Container,
-  Pic,
-  SocialMedia,
-  Icon,
-  Title,
-  Information,
-  ResumeButton,
-} from "./styles";
+import { Container, Pic, SocialMedia, Icon } from "./styles";
+
+import { Title, Button, Information } from "../../styles";
 import Me from "../../../static/me.png";
 import Github from "../../../static/github.svg";
 import Instagram from "../../../static/instagram.svg";
@@ -39,7 +33,7 @@ const About = () => {
         React Native for mobile development. I am always on the lookout for
         cutting edge platforms that streamline the user experience.
       </Information>
-      <ResumeButton>Resume</ResumeButton>
+      <Button>Resume</Button>
     </Container>
   );
 };

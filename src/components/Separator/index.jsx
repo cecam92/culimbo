@@ -2,9 +2,10 @@ import React from "react";
 
 import { Container, Balls } from "./styles";
 
-const Separator = () => {
+const Separator = ({ children }) => {
   return (
-    <Container className="container">
+    <Container>
+      {children}
       <Balls />
       <Balls />
       <Balls />

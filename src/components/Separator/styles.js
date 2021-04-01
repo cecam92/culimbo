@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: repeat(19, 17px);
   grid-template-rows: repeat(5, 17px);

@@ -28,26 +28,3 @@ export const Icon = styled.img`
   height: 51px;
   border-radius: 50%;
 `;
-
-export const Title = styled.h2`
-  font-size: 48px;
-  margin-top: 20px;
-`;
-
-export const Information = styled.p`
-  font-size: 14px;
-  margin-top: 20px;
-  width: 80vw;
-`;
-
-export const ResumeButton = styled.button`
-  width: 159.22px;
-  height: 54.9px;
-  background: #fff;
-  color: #ffb800;
-  font-size: 20px;
-  border-radius: 4px;
-  margin: 10px 0px;
-  border: none;
-  font-weight: bold;
-`;
