@@ -1,13 +1,13 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { Pic } from "../About/styles";
 
 const Image = ({ name }) => {
   return (
     <StaticQuery
       query={graphql`
         query GET_IMAGE {
-          pickle: file(relativePath: { eq: "pickle.png" }) {
+          me: file(relativePath: { eq: "me.png" }) {
             childImageSharp {
               fluid(maxWidth: 1000) {
                 ...GatsbyImageSharpFluid
@@ -16,12 +16,7 @@ const Image = ({ name }) => {
           }
         }
       `}
-      render={data => (
-        <Img
-          fluid={data[name].childImageSharp.fluid}
-          style={{ width: "300px" }}
-        />
-      )}
+      render={data => <Pic fluid={data[name].childImageSharp.fluid} />}
     />
   );
 };

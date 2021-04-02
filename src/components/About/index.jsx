@@ -12,8 +12,7 @@ import Image from "../Image";
 const About = () => {
   return (
     <Container>
-      <Pic src={Me} />
-      <Image name="pickle" />
+      <Image name="me" />
       <SocialMedia>
         <Icon src={LinkedIn} />
         <Icon src={Instagram} />
