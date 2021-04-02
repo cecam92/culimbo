@@ -7,7 +7,7 @@ import Portfolio from "../components/Portfolio";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
 
-import { Container } from "./styles";
+import { Container } from "../styles";
 
 import "../styles.js";
 export default function Home() {
