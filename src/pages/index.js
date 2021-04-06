@@ -9,7 +9,6 @@ import Footer from "../components/Footer";
 
 import { Container } from "../styles";
 
-import "../styles.js";
 export default function Home() {
   return (
     <Container>

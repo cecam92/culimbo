@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Img from "gatsby-image";
 
 export const Container = styled.div`
   display: flex;
@@ -14,7 +15,7 @@ export const Title = styled.h3`
   color: #fff;
   text-align: center;
 `;
-export const Image = styled.img`
+export const Image = styled(Img)`
   height: 500px;
 `;
 export const ButtonContainer = styled.div`

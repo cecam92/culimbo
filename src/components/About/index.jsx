@@ -1,18 +1,26 @@
 import React from "react";
-import { Container, Pic, SocialMedia, Icon } from "./styles";
+import { Container, SocialMedia, Icon } from "./styles";
 
 import { Title, Button, Information } from "../../styles";
-import Me from "../../images/me.png";
 import Github from "../../images/github.svg";
 import Instagram from "../../images/instagram.svg";
 import Twitter from "../../images/twitter.svg";
 import LinkedIn from "../../images/linkedin.svg";
-import Image from "../Image";
+import { StaticImage } from "gatsby-plugin-image";
 
-const About = () => {
+const About = ({ data }) => {
   return (
     <Container>
-      <Image name="me" />
+      <StaticImage
+        src="../../images/me.png"
+        placeholder="blurred"
+        alt="Cesar Martinez"
+        className="rounded"
+        width={248}
+        height={248}
+        quality={100}
+      />
+
       <SocialMedia>
         <Icon src={LinkedIn} />
         <Icon src={Instagram} />

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Img from "gatsby-image";
+import {} from "gatsby-plugin-image";
 
 export const Container = styled.div`
   display: flex;
@@ -9,11 +9,13 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-export const Pic = styled(Img)`
-  width: 248px;
-  height: 248px;
-  border-radius: 50%;
-`;
+// export const Pic = styled.img`
+//   .aboutImage {
+//     width: 248px;
+//     height: 248px;
+//     border-radius: 50%;
+//   }
+// `;
 
 export const SocialMedia = styled.div`
   display: flex;

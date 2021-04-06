@@ -15,7 +15,7 @@ const Project = () => {
   return (
     <Container>
       <Title>Rick and Morty</Title>
-      <Image src={Pickle} />
+      <Image name="pickle" />
       <Information>
         I decided to create this website where you can find every character from
         the TV show Rick and Morty. All the data presented in this project is
