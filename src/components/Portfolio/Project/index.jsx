@@ -9,9 +9,8 @@ import {
   IconsContainer,
   Icon,
 } from "./styles";
-import { GatsbyImage } from "gatsby-plugin-image";
+
 const Project = ({ data }) => {
-  console.log(data);
   return (
     <>
       {data.map(project => {
@@ -20,7 +19,7 @@ const Project = ({ data }) => {
           description,
           techs,
           pictureSm,
-          pictureLg,
+          //  pictureLg,
           url,
           repository,
         } = project;
@@ -28,7 +27,6 @@ const Project = ({ data }) => {
           <Container>
             <Title>{title}</Title>
             <Image name={pictureSm} />
-            <GatsbyImage image={pictureSm} alt={title} />
             {description.map((info, index) => {
               return <Information key={index}>{info.paragraph}</Information>;
             })}
