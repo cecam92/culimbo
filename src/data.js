@@ -5,7 +5,6 @@ import ReactIcon from "./images/react.png";
 import Sass from "./images/sass.png";
 import Rest from "./images/rest.png";
 import graph from "./images/graphql.png";
-import Pickle from "./images/pickle.png";
 import StyledComponents from "./images/styledComponents.png";
 
 const Projects = [
