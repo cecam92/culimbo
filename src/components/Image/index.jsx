@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-import { Pic } from "../About/styles";
-import { StaticImage } from "gatsby-plugin-image";
+import { ProjectoImage } from "../../styles";
+
 const Image = ({ name }) => {
   return (
     <StaticQuery
@@ -9,21 +9,30 @@ const Image = ({ name }) => {
         query GET_PICKLE {
           pickle: file(relativePath: { eq: "pickle.png" }) {
             childImageSharp {
-              fluid(maxWidth: 100) {
+              fluid(maxWidth: 248) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
-          me: file(relativePath: { eq: "me.png" }) {
+          crypto: file(relativePath: { eq: "crypto.png" }) {
             childImageSharp {
-              fluid(maxWidth: 100) {
+              fluid(maxWidth: 248) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          petgram: file(relativePath: { eq: "petgram.png" }) {
+            childImageSharp {
+              fluid(maxWidth: 248) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
         }
       `}
-      render={data => <StaticImage fluid={data[name].childImageSharp.fluid} />}
+      render={data => (
+        <ProjectoImage fluid={data[name].childImageSharp.fluid} />
+      )}
     />
   );
 };

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import "./fonts.css";
+import Img from "gatsby-image";
 
 export const Title = styled.h2`
   font-size: 48px;
@@ -15,6 +16,10 @@ export const Button = styled.button`
   margin: 20px 10px;
   border: none;
   font-weight: bold;
+  & a {
+    color: inherit;
+    text-decoration: none;
+  }
 `;
 
 export const Information = styled.p`
@@ -28,4 +33,10 @@ export const Container = styled.div`
   width: 100vw;
   margin: 0px;
   padding: 0px;
+`;
+
+export const ProjectoImage = styled(Img)`
+  border-radius: 15px;
+  width: 248px;
+  margin: 20px auto;
 `;

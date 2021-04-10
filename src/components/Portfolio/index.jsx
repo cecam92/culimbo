@@ -3,6 +3,7 @@ import { Container } from "./styles";
 import Project from "./Project";
 
 import { Title, Information } from "../../styles";
+import projects from "../../data";
 
 const Portfolio = () => {
   return (
@@ -14,7 +15,7 @@ const Portfolio = () => {
         techonlogies like CSS preprocessors, CSS frameworks, Hooks, Routering
         and version control that you can check for each project.
       </Information>
-      <Project />
+      <Project data={projects} />
     </Container>
   );
 };
