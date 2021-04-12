@@ -35,7 +35,7 @@ const About = () => {
     <Container>
       <StaticImage
         src="../../images/me.png"
-        placeholder="blurred"
+        placeholder="tracedSVG"
         alt="Cesar Martinez"
         className="rounded"
         width={248}
