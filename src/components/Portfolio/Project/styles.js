@@ -34,8 +34,8 @@ export const IconsContainer = styled.div`
 export const Icon = styled.img`
   width: 50px;
   height: 50px;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%);
   &:hover {
     filter: grayscale(0%);
-  }
+  } */
 `;

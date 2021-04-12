@@ -8,28 +8,23 @@ import {
   Text,
 } from "./styles";
 
-import ReactIcon from "../../images/react.svg";
+import Techs from "../../technologiesData";
+
 const Technologies = () => {
+  const data = Techs;
   return (
     <Container>
       <Title>Technologies</Title>
       <IconsContainer>
-        <TechContainer>
-          <Image src={ReactIcon} />
-          <Text>React & Native</Text>
-        </TechContainer>
-        <TechContainer>
-          <Image src={ReactIcon} />
-          <Text>React & Native</Text>
-        </TechContainer>
-        <TechContainer>
-          <Image src={ReactIcon} />
-          <Text>React & Native</Text>
-        </TechContainer>
-        <TechContainer>
-          <Image src={ReactIcon} />
-          <Text>React & Native</Text>
-        </TechContainer>
+        {data.map(tech => {
+          const { name, icon } = tech;
+          return (
+            <TechContainer>
+              <Image src={icon} />
+              <Text>{name}</Text>
+            </TechContainer>
+          );
+        })}
       </IconsContainer>
     </Container>
   );

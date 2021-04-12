@@ -17,7 +17,6 @@ export const TechContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   padding: 10px;
 `;
 export const Image = styled.img`
@@ -26,4 +25,5 @@ export const Image = styled.img`
 `;
 export const Text = styled.p`
   font-size: 14px;
+  margin-left: 10px;
 `;

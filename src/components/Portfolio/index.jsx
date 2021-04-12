@@ -3,7 +3,7 @@ import { Container } from "./styles";
 import Project from "./Project";
 
 import { Title, Information } from "../../styles";
-import projects from "../../data";
+import projects from "../../projectsData";
 
 const Portfolio = () => {
   return (
