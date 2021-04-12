@@ -9,8 +9,8 @@ export const Title = styled.h2`
 export const Button = styled.button`
   width: 140px;
   height: 54px;
-  background: #fff;
-  color: #ffb800;
+  background: ${props => (props.git ? "#ffb800" : "#fff")};
+  color: ${props => (props.git ? "#fff" : "#ffb800")};
   font-size: 20px;
   border-radius: 4px;
   margin: 20px 10px;

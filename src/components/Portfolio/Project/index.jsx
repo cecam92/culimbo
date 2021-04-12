@@ -36,7 +36,7 @@ const Project = ({ data }) => {
                   Demo
                 </a>
               </Button>
-              <Button>
+              <Button git>
                 <a href={repository} target="_blank" rel="noopener noreferrer">
                   Github
                 </a>

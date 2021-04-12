@@ -24,12 +24,17 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
 `;
 export const IconsContainer = styled.div`
-  width: 100vw;
-  height: 100px;
   display: flex;
+  max-width: 687px;
+  width: 100%;
+  height: 100px;
+  top: 25%;
   justify-content: space-evenly;
   position: absolute;
-  top: 18px;
+  left: 0px;
+  @media (max-width: 374px) {
+    top: 18px;
+  }
 `;
 export const Icon = styled.img`
   width: 50px;

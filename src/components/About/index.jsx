@@ -8,7 +8,29 @@ import Twitter from "../../images/twitter.svg";
 import LinkedIn from "../../images/linkedin.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
-const About = ({ data }) => {
+const About = () => {
+  const socials = [
+    {
+      name: "LinkedIn",
+      icon: LinkedIn,
+      url: "http://linkedin.com/in/cecam92",
+    },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      url: "https://instagram.com/cecam92",
+    },
+    {
+      name: "Twitter",
+      icon: Twitter,
+      url: "http://twitter.com/cecam92",
+    },
+    {
+      name: "GitHub",
+      icon: Github,
+      url: "http://github.com/cecam92",
+    },
+  ];
   return (
     <Container>
       <StaticImage
@@ -22,10 +44,18 @@ const About = ({ data }) => {
       />
 
       <SocialMedia>
-        <Icon src={LinkedIn} />
-        <Icon src={Instagram} />
-        <Icon src={Twitter} />
-        <Icon src={Github} />
+        {socials.map((social, index) => {
+          return (
+            <a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon src={social.icon} />
+            </a>
+          );
+        })}
       </SocialMedia>
       <Title>Who am I?</Title>
       <Information>

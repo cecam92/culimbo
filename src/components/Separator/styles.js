@@ -9,6 +9,9 @@ export const Container = styled.div`
   justify-content: center;
   margin-top: 20px;
   width: 100vw;
+  @media (min-width: 374px) {
+    gap: 4px;
+  }
 `;
 export const Balls = styled.div`
   width: 7px;
