@@ -4,10 +4,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 html {
   background-color: #121212;
+  overflow-y: auto;
+  width: auto;
+  scroll-behavior: smooth;
 
   font-family: "Open Sans", sans-serif;
 }
@@ -20,9 +24,21 @@ h6 {
   font-family: "Roboto Condensed", sans-serif;
   color: #ffb800;
 }
+
 p {
   color: rgba(255, 255, 255, 0.79);
 }
 .rounded {
   border-radius: 50%;
+}
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  overflow: hidden;
 }

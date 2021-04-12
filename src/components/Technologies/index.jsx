@@ -16,10 +16,10 @@ const Technologies = () => {
     <Container>
       <Title>Technologies</Title>
       <IconsContainer>
-        {data.map(tech => {
+        {data.map((tech, index) => {
           const { name, icon } = tech;
           return (
-            <TechContainer>
+            <TechContainer key={index}>
               <Image src={icon} />
               <Text>{name}</Text>
             </TechContainer>

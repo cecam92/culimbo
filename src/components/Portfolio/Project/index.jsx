@@ -13,7 +13,7 @@ import {
 const Project = ({ data }) => {
   return (
     <>
-      {data.map(project => {
+      {data.map((project, index) => {
         const {
           title,
           description,
@@ -24,7 +24,7 @@ const Project = ({ data }) => {
           repository,
         } = project;
         return (
-          <Container>
+          <Container key={index}>
             <Title>{title}</Title>
             <Image name={pictureSm} />
             {description.map((info, index) => {

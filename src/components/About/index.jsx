@@ -6,6 +6,7 @@ import Github from "../../images/github.svg";
 import Instagram from "../../images/instagram.svg";
 import Twitter from "../../images/twitter.svg";
 import LinkedIn from "../../images/linkedin.svg";
+import CV from "../../images/cv.pdf";
 import { StaticImage } from "gatsby-plugin-image";
 
 const About = () => {
@@ -72,7 +73,11 @@ const About = () => {
         React Native for mobile development. I am always on the lookout for
         cutting edge platforms that streamline the user experience.
       </Information>
-      <Button>Resume</Button>
+      <Button>
+        <a href={CV} target="_blank" rel="noopener noreferrer">
+          Resume
+        </a>
+      </Button>
     </Container>
   );
 };

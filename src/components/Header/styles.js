@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 50px;
   line-height: 56px;
   text-align: center;
 `;

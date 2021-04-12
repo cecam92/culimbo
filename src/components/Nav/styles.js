@@ -7,9 +7,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #121212;
 `;
 export const Logo = styled.h3`
   width: 147px;
+  height: 25px;
 `;
 
 export const Menu = styled.img`
