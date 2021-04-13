@@ -35,7 +35,7 @@ export const IconsContainer = styled.div`
   justify-self: center;
   justify-content: space-around;
   position: absolute;
-  z-index: 100;
+
   @media (max-width: 374px) {
     top: 18px;
   }
