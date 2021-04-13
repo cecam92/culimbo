@@ -10,28 +10,29 @@ import { useSpring, animated as a } from "react-spring";
 
 import { Container } from "../styles";
 
-const isBrowser = typeof window !== "undefined";
-
 export default function Home() {
   const [data, setData] = useState(1);
   const [stick, setStick] = useState(false);
-  if (isBrowser) {
-    const fadeProps = useSpring({
-      position: "absolute",
-      top: "20vh",
-      paddingTop: 10,
-      opacity: stick ? 1 : 0,
-      backgroundColor: stick ? "#121212" : "#121212",
-    });
-    function cutNumber(num) {
-      const MIN = 1;
-      const MAX = 96;
-      const parsed = parseInt(num);
-      return Math.min(Math.max(parsed, MIN), MAX);
-    }
+
+  const fadeProps = useSpring({
+    position: "absolute",
+    top: "20vh",
+    paddingTop: 10,
+    opacity: stick ? 1 : 0,
+    backgroundColor: stick ? "#121212" : "#121212",
+  });
+  function cutNumber(num) {
+    const MIN = 1;
+    const MAX = 96;
+    const parsed = parseInt(num);
+    return Math.min(Math.max(parsed, MIN), MAX);
+  }
+
+  useEffect(() => {
     function scrolling() {
       setData(cutNumber(window.scrollY));
     }
+    window.addEventListener("scroll", scrolling);
     function getStick() {
       if (data >= 96) {
         setStick(true);
@@ -39,37 +40,30 @@ export default function Home() {
         setStick(false);
       }
     }
-    useEffect(() => {
-      window.addEventListener("scroll", scrolling);
-      getStick();
+    getStick();
 
-      return () => {
-        window.removeEventListener("scroll", scrolling);
-      };
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data]);
+    return () => {
+      window.removeEventListener("scroll", scrolling);
+    };
+  }, [data]);
 
-    return (
-      <>
-        <Header data={data} />
-        <a.div style={fadeProps}>
-          {stick && (
-            <>
-              <Nav />
-            </>
-          )}
-          <Container>
-            {/* <Nav /> */}
-            <About />
-            <Separator />
-            <Portfolio />
-            <Technologies />
-            <Footer />
-          </Container>
-        </a.div>
-      </>
-    );
-  } else {
-    return <></>;
-  }
+  return (
+    <>
+      <Header data={data} />
+      <a.div style={fadeProps}>
+        {stick && (
+          <>
+            <Nav />
+          </>
+        )}
+        <Container>
+          <About />
+          <Separator />
+          <Portfolio />
+          <Technologies />
+          <Footer />
+        </Container>
+      </a.div>
+    </>
+  );
 }

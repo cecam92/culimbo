@@ -6,7 +6,9 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  min-width: 320px;
+  width: 100%;
+  max-width: 687px;
   margin-top: 50px;
   padding: 0px auto;
 `;
@@ -26,12 +28,14 @@ export const ButtonContainer = styled.div`
 export const IconsContainer = styled.div`
   display: flex;
   max-width: 687px;
-  width: 100%;
+  width: 80%;
+  min-width: 320px;
   height: 100px;
   top: 25%;
-  justify-content: space-evenly;
+  justify-self: center;
+  justify-content: space-around;
   position: absolute;
-  left: 0px;
+  z-index: 100;
   @media (max-width: 374px) {
     top: 18px;
   }

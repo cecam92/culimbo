@@ -7,21 +7,21 @@ const Image = ({ name }) => {
     <StaticQuery
       query={graphql`
         query GET_PICKLE {
-          pickle: file(relativePath: { eq: "pickle.png" }) {
+          RickandMorty: file(relativePath: { eq: "pickle.png" }) {
             childImageSharp {
               fluid(maxWidth: 248) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
-          crypto: file(relativePath: { eq: "crypto.png" }) {
+          Crypto: file(relativePath: { eq: "crypto.png" }) {
             childImageSharp {
               fluid(maxWidth: 248) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
-          petgram: file(relativePath: { eq: "petgram.png" }) {
+          Petgram: file(relativePath: { eq: "petgram.png" }) {
             childImageSharp {
               fluid(maxWidth: 248) {
                 ...GatsbyImageSharpFluid
@@ -31,7 +31,10 @@ const Image = ({ name }) => {
         }
       `}
       render={data => (
-        <ProjectoImage fluid={data[name].childImageSharp.fluid} />
+        <ProjectoImage
+          fluid={data[name].childImageSharp.fluid}
+          alt={`${name} thumbnail`}
+        />
       )}
     />
   );
