@@ -10,7 +10,7 @@ const Header = ({ data }) => {
       transform: "scale(1)",
       opacity: 1,
     },
-    opacity: 1 - scroller / 100,
+    opacity: 1 - scroller / 100 < 0 ? 1 : 1 - scroller / 100,
     transform: `scale(${data})`,
   });
   useEffect(() => {
