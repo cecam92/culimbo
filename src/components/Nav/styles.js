@@ -11,7 +11,7 @@ export const Container = styled.div`
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: #121212;
+  background-color: #060708;
 `;
 export const Logo = styled.h3`
   width: 147px;

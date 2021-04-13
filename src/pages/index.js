@@ -19,7 +19,7 @@ export default function Home() {
     top: "20vh",
     paddingTop: 10,
     opacity: stick ? 1 : 0,
-    backgroundColor: stick ? "#121212" : "#121212",
+    backgroundColor: "#060708",
   });
   function cutNumber(num) {
     const MIN = 1;
@@ -50,20 +50,22 @@ export default function Home() {
   return (
     <>
       <Header data={data} />
+
       <a.div style={fadeProps}>
         {stick && (
           <>
-            <Nav />
+            <Container>
+              <Nav />
+              <About />
+              <Separator />
+              <Portfolio />
+              <Technologies />
+              <Footer />
+            </Container>
           </>
         )}
-        <Container>
-          <About />
-          <Separator />
-          <Portfolio />
-          <Technologies />
-          <Footer />
-        </Container>
       </a.div>
+      {!stick && <div style={{ height: "300vh", width: "100vw" }}></div>}
     </>
   );
 }
