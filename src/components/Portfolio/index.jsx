@@ -7,7 +7,7 @@ import projects from "../../projectsData";
 
 const Portfolio = () => {
   return (
-    <Container>
+    <Container id="portfolio">
       <Title>Portfolio</Title>
       <Information>
         Here you can find some of my projects as a frontend developer. I have

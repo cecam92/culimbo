@@ -13,7 +13,7 @@ import Techs from "../../technologiesData";
 const Technologies = () => {
   const data = Techs;
   return (
-    <Container>
+    <Container id="techs">
       <Title>Technologies</Title>
       <IconsContainer>
         {data.map((tech, index) => {

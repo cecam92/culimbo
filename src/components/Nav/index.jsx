@@ -19,7 +19,7 @@ const Nav = () => {
           onClick={handleClick}
         />
       </ContainerNav>
-      {showMenu && <Menu />}
+      {showMenu && <Menu show={handleClick} />}
     </Container>
   );
 };

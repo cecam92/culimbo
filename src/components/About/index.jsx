@@ -33,7 +33,7 @@ const About = () => {
     },
   ];
   return (
-    <Container>
+    <Container id="about">
       <StaticImage
         src="../../images/me.png"
         placeholder="tracedSVG"

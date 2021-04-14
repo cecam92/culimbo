@@ -18,7 +18,7 @@ const Header = ({ data }) => {
   }, [scroller]);
 
   return (
-    <header>
+    <header id="home">
       <a.div style={headerProps}>
         <Container>
           <Title>Cesar Martinez</Title>
