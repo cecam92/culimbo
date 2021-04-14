@@ -31,11 +31,13 @@ const Project = ({ data }) => {
               return <Information key={index}>{info.paragraph}</Information>;
             })}
             <ButtonContainer>
-              <Button>
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                  Demo
-                </a>
-              </Button>
+              {url && (
+                <Button>
+                  <a href={url} target="_blank" rel="noopener noreferrer">
+                    Demo
+                  </a>
+                </Button>
+              )}
               <Button git>
                 <a href={repository} target="_blank" rel="noopener noreferrer">
                   Github
