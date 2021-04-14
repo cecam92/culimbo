@@ -65,7 +65,7 @@ export default function Home() {
           </>
         )}
       </a.div>
-      {!stick && <div style={{ height: "200vh", width: "100vw" }}></div>}
+      {!stick && <div style={{ height: "120vh", width: "100vw" }}></div>}
     </>
   );
 }

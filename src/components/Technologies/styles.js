@@ -4,6 +4,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 50px;
 `;
 
 export const IconsContainer = styled.div`
