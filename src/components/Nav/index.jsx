@@ -13,7 +13,15 @@ const Nav = () => {
   return (
     <Container>
       <ContainerNav>
-        <Logo>Cesar Martinez</Logo>
+        <a href="#home">
+          <Logo
+            onClick={() => {
+              setShowMenu(false);
+            }}
+          >
+            Cesar Martinez
+          </Logo>
+        </a>
         <MenuIcon
           src={showMenu ? closeIcon : burgerMenu}
           onClick={handleClick}

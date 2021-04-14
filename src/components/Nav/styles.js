@@ -10,6 +10,9 @@ export const ContainerNav = styled.div`
   width: 100%;
   z-index: 100;
   background-color: #060708;
+  & a {
+    height: 25px;
+  }
 `;
 export const Container = styled.div`
   width: 100vw;
