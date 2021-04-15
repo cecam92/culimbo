@@ -31,7 +31,7 @@ const Menu = ({ show }) => {
           <Icon src={downloadIcon} />
         </a>
       </ContainerCV>
-      <Shadow />
+      <Shadow onClick={closeMenu} />
     </>
   );
 };
