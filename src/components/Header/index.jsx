@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSpring, animated as a } from "react-spring";
 
 import { Title, SubTitle, Container } from "./styles";
 
 const Header = ({ data }) => {
-  const [scroller, setScroller] = useState(0);
   const headerProps = useSpring({
     from: {
       transform: "scale(1)",
       opacity: 1,
     },
-    opacity: 1 - scroller / 100 < 0 ? 1 : 1 - scroller / 100,
+    opacity: data === 96 ? 0 : 1 - data / 100,
     transform: `scale(${data})`,
   });
-  useEffect(() => {
-    setScroller(window.scrollY);
-  }, [scroller]);
-
   return (
     <header id="home">
       <a.div style={headerProps}>

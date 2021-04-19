@@ -13,6 +13,7 @@ import { Container } from "../styles";
 export default function Home() {
   const [data, setData] = useState(1);
   const [stick, setStick] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const fadeProps = useSpring({
     position: "absolute",
@@ -32,6 +33,7 @@ export default function Home() {
     function scrolling() {
       setData(cutNumber(window.scrollY));
     }
+
     window.addEventListener("scroll", scrolling);
     function getStick() {
       if (data >= 96) {
@@ -47,24 +49,40 @@ export default function Home() {
     };
   }, [data]);
 
+  useEffect(() => {
+    function setDesktop() {
+      if (window.innerWidth >= 1024) {
+        setIsDesktop(true);
+      } else {
+        setIsDesktop(false);
+      }
+    }
+    setDesktop();
+    window.addEventListener("resize", setDesktop);
+    return () => {
+      window.removeEventListener("resize", setDesktop);
+    };
+  }, [isDesktop]);
+
   return (
     <>
       <Header data={data} />
-
-      <a.div style={fadeProps}>
-        {stick && (
-          <>
-            <Container>
-              <Nav />
-              <About />
-              <Separator />
-              <Portfolio />
-              <Technologies />
-              <Footer />
-            </Container>
-          </>
-        )}
-      </a.div>
+      <div style={{ maxWidth: "1000px", margin: "0px auto" }}>
+        <a.div style={fadeProps}>
+          {stick && (
+            <>
+              <Container>
+                <Nav desktop={isDesktop} />
+                <About />
+                <Separator />
+                <Portfolio />
+                <Technologies />
+                <Footer />
+              </Container>
+            </>
+          )}
+        </a.div>
+      </div>
       {!stick && <div style={{ height: "120vh", width: "100vw" }}></div>}
     </>
   );

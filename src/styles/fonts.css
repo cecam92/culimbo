@@ -12,9 +12,9 @@ html {
   overflow-y: auto;
   width: auto;
   scroll-behavior: smooth;
-
   font-family: "Open Sans", sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -24,8 +24,26 @@ h6 {
   font-family: "Roboto Condensed", sans-serif;
   color: #ffb800;
 }
+h1 {
+  font-size: 50px;
+  line-height: 56px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 28px;
+}
+h5 {
+  font-size: 24px;
+}
 
 p {
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.79);
 }
 a {
@@ -40,8 +58,30 @@ header {
   align-items: center;
   flex-flow: column nowrap;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
+  margin: 0px auto;
   height: 100vh;
   z-index: -10;
   overflow: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 72px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  h3 {
+    font-size: 48px;
+  }
+  h4 {
+    font-size: 40px;
+  }
+  h5 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 18px;
+  }
 }

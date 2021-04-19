@@ -8,9 +8,14 @@ export const Container = styled.div`
   height: 100px;
   justify-content: center;
   margin-top: 20px;
-  width: 100vw;
+  width: 90vw;
+
   @media (min-width: 374px) {
     gap: 4px;
+  }
+  @media (min-width: 1024px) {
+    gap: 4px;
+    width: 90vw;
   }
 `;
 export const Balls = styled.div`

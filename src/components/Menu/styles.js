@@ -7,10 +7,9 @@ export const Container = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.71);
   background-color: #060708;
 `;
-export const Label = styled.h3`
+export const Label = styled.h4`
   color: rgba(255, 255, 255, 0.79);
   margin: 10px;
-  font-size: 28px;
 `;
 
 export const ContainerCV = styled.div`

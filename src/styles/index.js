@@ -3,7 +3,6 @@ import "./fonts.css";
 import Img from "gatsby-image";
 
 export const Title = styled.h2`
-  font-size: 48px;
   margin: 20px 0px;
 `;
 export const Button = styled.button`
@@ -23,14 +22,14 @@ export const Button = styled.button`
 `;
 
 export const Information = styled.p`
-  font-size: 14px;
-  width: 80vw;
+  width: 100%;
+  max-width: 1000px;
 `;
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
+  max-width: 1000px;
   margin: 0px;
   padding: 0px;
 `;
