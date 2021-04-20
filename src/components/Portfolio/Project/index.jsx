@@ -8,6 +8,8 @@ import {
   ButtonContainer,
   IconsContainer,
   Icon,
+  ContainerDescription,
+  TechContainer,
 } from "./styles";
 
 const Project = ({ data }) => {
@@ -27,14 +29,16 @@ const Project = ({ data }) => {
           <Container key={index}>
             <Title>{title}</Title>
             <Image name={pictureSm} />
-            {description.map((info, index) => {
-              return (
-                <Information key={index}>
-                  {info.paragraph}
-                  <br /> <br />
-                </Information>
-              );
-            })}
+            <ContainerDescription>
+              {description.map((info, index) => {
+                return (
+                  <Information key={index}>
+                    {info.paragraph}
+                    <br /> <br />
+                  </Information>
+                );
+              })}
+            </ContainerDescription>
             <ButtonContainer>
               {url && (
                 <Button>
@@ -49,13 +53,15 @@ const Project = ({ data }) => {
                 </a>
               </Button>
             </ButtonContainer>
-            <Separator>
-              <IconsContainer>
-                {techs.map((info, index) => {
-                  return <Icon key={index} src={info.icon} />;
-                })}
-              </IconsContainer>
-            </Separator>
+            <TechContainer>
+              <Separator>
+                <IconsContainer>
+                  {techs.map((info, index) => {
+                    return <Icon key={index} src={info.icon} />;
+                  })}
+                </IconsContainer>
+              </Separator>
+            </TechContainer>
           </Container>
         );
       })}

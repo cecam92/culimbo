@@ -74,7 +74,7 @@ export default function Home() {
               <Container>
                 <Nav desktop={isDesktop} />
                 <About />
-                <Separator />
+                <Separator desktop={isDesktop} />
                 <Portfolio />
                 <Technologies />
                 <Footer />

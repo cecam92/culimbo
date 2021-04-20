@@ -38,4 +38,8 @@ export const ProjectoImage = styled(Img)`
   border-radius: 15px;
   width: 248px;
   margin: 20px auto;
+  @media (min-width: 1024px) {
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
 `;

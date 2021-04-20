@@ -8,13 +8,18 @@ export const Container = styled.div`
   height: 100px;
   justify-content: center;
   margin-top: 20px;
-  max-width: 1000px;
+  width: 320px;
 
-  @media (min-width: 374px) {
-    gap: 4px;
+  gap: 4px;
+
+  @media (min-width: 375px) {
+    width: 100%;
   }
   @media (min-width: 1024px) {
-    width: 90vw;
+    grid-template-columns: repeat(25, 17px);
+    grid-template-rows: repeat(4, 17px);
+    max-width: 1000px;
+    height: 80px;
   }
 `;
 export const Balls = styled.div`
