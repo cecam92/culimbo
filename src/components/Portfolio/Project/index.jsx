@@ -28,7 +28,12 @@ const Project = ({ data }) => {
             <Title>{title}</Title>
             <Image name={pictureSm} />
             {description.map((info, index) => {
-              return <Information key={index}>{info.paragraph}</Information>;
+              return (
+                <Information key={index}>
+                  {info.paragraph}
+                  <br /> <br />
+                </Information>
+              );
             })}
             <ButtonContainer>
               {url && (

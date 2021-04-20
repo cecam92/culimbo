@@ -15,7 +15,7 @@ import Nodejs from "./images/nodejs.svg";
 import Mongo from "./images/mongo.png";
 
 const Techs = [
-  { name: "html 5", icon: HTML },
+  { name: "Html 5", icon: HTML },
   { name: "CSS 3", icon: CSS },
   { name: "JavaScript", icon: JS },
   { name: "React & Native", icon: ReactIcon },

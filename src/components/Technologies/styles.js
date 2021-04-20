@@ -13,12 +13,19 @@ export const IconsContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 export const TechContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 10px;
+  @media (min-width: 1024px) {
+    padding: 20px 25px;
+  }
 `;
 export const Image = styled.img`
   width: 50px;
