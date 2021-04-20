@@ -1,5 +1,11 @@
 import React from "react";
-import { Container, SocialMedia, Icon } from "./styles";
+import {
+  Container,
+  SocialMedia,
+  Icon,
+  ContainerParagraph,
+  ImageContainer,
+} from "./styles";
 
 import { Title, Button, Information } from "../../styles";
 import Github from "../../images/github.svg";
@@ -53,15 +59,17 @@ cutting edge platforms that streamline the user experience.`,
   ];
   return (
     <Container id="about">
-      <StaticImage
-        src="../../images/me.png"
-        placeholder="tracedSVG"
-        alt="Cesar Martinez"
-        className="rounded"
-        width={248}
-        height={248}
-        quality={100}
-      />
+      <ImageContainer>
+        <StaticImage
+          src="../../images/me.png"
+          placeholder="tracedSVG"
+          alt="Cesar Martinez"
+          className="rounded"
+          width={248}
+          height={248}
+          quality={100}
+        />
+      </ImageContainer>
 
       <SocialMedia>
         {socials.map((social, index) => {
@@ -78,14 +86,16 @@ cutting edge platforms that streamline the user experience.`,
         })}
       </SocialMedia>
       <Title>Who am I?</Title>
-      {description.map((info, index) => {
-        return (
-          <Information key={index}>
-            {info.paragraph}
-            <br /> <br />
-          </Information>
-        );
-      })}
+      <ContainerParagraph>
+        {description.map((info, index) => {
+          return (
+            <Information key={index}>
+              {info.paragraph}
+              <br /> <br />
+            </Information>
+          );
+        })}
+      </ContainerParagraph>
       <Button>
         <a href={CV} target="_blank" rel="noopener noreferrer">
           Resume
