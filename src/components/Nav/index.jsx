@@ -19,7 +19,6 @@ const Nav = ({ desktop }) => {
   const handleClick = () => {
     setShowMenu(!showMenu);
   };
-  console.log("nav", desktop);
 
   return (
     <>

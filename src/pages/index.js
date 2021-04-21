@@ -77,7 +77,7 @@ export default function Home() {
                   <Nav desktop={isDesktop} />
                   <About />
                   <Separator desktop={isDesktop} />
-                  <Portfolio />
+                  <Portfolio desktop={isDesktop} />
                   <Technologies />
                 </div>
                 <Footer />

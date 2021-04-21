@@ -2,9 +2,7 @@ import React from "react";
 
 import { Container, Balls } from "./styles";
 
-const Separator = ({ children, desktop }) => {
-  console.log(desktop);
-
+const Separator = ({ children }) => {
   return (
     <Container>
       {children}

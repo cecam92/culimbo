@@ -28,7 +28,7 @@ export const Container = styled.div`
 
   @media (min-width: 1024px) {
     display: grid;
-    grid-template-columns: 450px 450px;
+    grid-template-columns: 400px 500px;
     grid-template-rows: 100px 300px 120px auto auto;
     ${Title} {
       grid-column-start: 1;
@@ -56,6 +56,7 @@ export const Container = styled.div`
     }
   }
   &:nth-child(even) {
+    grid-template-columns: 500px 400px;
     ${Title} {
       grid-row-start: 1;
       grid-row-end: 2;

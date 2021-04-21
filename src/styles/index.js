@@ -36,10 +36,14 @@ export const Container = styled.div`
 
 export const ProjectoImage = styled(Img)`
   border-radius: 15px;
-  width: 248px;
+  width: 249px;
+  max-height: 500px;
   margin: 20px auto;
   @media (min-width: 1024px) {
     grid-row-start: 1;
     grid-row-end: 4;
+    margin: 0px auto;
+    width: ${props => (props.lg ? "480px" : "249px")};
+    height: ${props => (props.lg ? "480px" : "auto")};
   }
 `;

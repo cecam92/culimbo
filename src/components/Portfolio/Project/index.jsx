@@ -12,7 +12,7 @@ import {
   TechContainer,
 } from "./styles";
 
-const Project = ({ data }) => {
+const Project = ({ data, desktop }) => {
   return (
     <>
       {data.map((project, index) => {
@@ -21,14 +21,19 @@ const Project = ({ data }) => {
           description,
           techs,
           pictureSm,
-          //  pictureLg,
+          pictureLg,
           url,
           repository,
         } = project;
+
         return (
           <Container key={index}>
             <Title>{title}</Title>
-            <Image name={pictureSm} />
+            {/* {desktop && <Image name={pictureLg} large />} */}
+            {!desktop ? <Image name={pictureSm} /> : null}
+            {desktop ? (
+              <Image name={pictureLg || pictureSm} large={pictureLg} />
+            ) : null}
             <ContainerDescription>
               {description.map((info, index) => {
                 return (

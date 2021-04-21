@@ -31,7 +31,7 @@ const Projects = [
       { name: "Sass", icon: Sass },
     ],
     pictureSm: "RickandMorty",
-    pictureLg: "./images/RickLaptop.png",
+    pictureLg: "RickandMortyLg",
     url: "https://cecam92.github.io/RickandMorty/",
     repository: "https://github.com/cecam92/RickandMorty",
   },
@@ -54,7 +54,7 @@ const Projects = [
       { name: "JavaScript", icon: JS },
     ],
     pictureSm: "Petgram",
-    pictureLg: "petgram",
+    pictureLg: null,
     url: "http://cecam92-petgram.netlify.app/",
     repository: "https://github.com/cecam92/petgram",
   },
@@ -79,6 +79,8 @@ const Projects = [
       { name: "JavaScript", icon: JS },
     ],
     pictureSm: "Crypto",
+    pictureLg: null,
+
     repository: "https://github.com/cecam92/CryptoTracker",
   },
 ];
