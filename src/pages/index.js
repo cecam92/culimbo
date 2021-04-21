@@ -19,6 +19,7 @@ export default function Home() {
     position: "absolute",
     top: "20vh",
     paddingTop: 10,
+    width: "100%",
     opacity: stick ? 1 : 0,
     backgroundColor: "#060708",
   });
@@ -67,22 +68,25 @@ export default function Home() {
   return (
     <>
       <Header data={data} />
-      <div style={{ maxWidth: "1000px", margin: "0px auto" }}>
+      <div>
         <a.div style={fadeProps}>
           {stick && (
             <>
               <Container>
-                <Nav desktop={isDesktop} />
-                <About />
-                <Separator desktop={isDesktop} />
-                <Portfolio />
-                <Technologies />
+                <div style={{ maxWidth: "1000px", margin: "0px auto" }}>
+                  <Nav desktop={isDesktop} />
+                  <About />
+                  <Separator desktop={isDesktop} />
+                  <Portfolio />
+                  <Technologies />
+                </div>
                 <Footer />
               </Container>
             </>
           )}
         </a.div>
       </div>
+
       {!stick && <div style={{ height: "120vh", width: "100vw" }}></div>}
     </>
   );
