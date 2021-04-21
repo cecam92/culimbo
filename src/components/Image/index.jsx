@@ -17,7 +17,7 @@ const Image = ({ name, large }) => {
           }
           RickandMortyLg: file(relativePath: { eq: "RickLaptop.png" }) {
             childImageSharp {
-              fluid(maxWidth: 500) {
+              fluid(maxWidth: 480) {
                 ...GatsbyImageSharpFluid
               }
             }

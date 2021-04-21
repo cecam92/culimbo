@@ -43,7 +43,7 @@ export const ProjectoImage = styled(Img)`
     grid-row-start: 1;
     grid-row-end: 4;
     margin: 0px auto;
-    width: ${props => (props.lg ? "480px" : "249px")};
+    width: ${props => (props.lg ? "490px" : "249px")};
     height: ${props => (props.lg ? "480px" : "auto")};
   }
 `;
