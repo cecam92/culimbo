@@ -11,7 +11,9 @@ export const ButtonContainer = styled.div`
   justify-content: center;
 `;
 
-export const ContainerDescription = styled.div``;
+export const ContainerDescription = styled.div`
+  width: 90%;
+`;
 
 export const TechContainer = styled.div``;
 
@@ -21,10 +23,9 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   min-width: 320px;
-  width: 100%;
+  width: 90%;
   max-width: 1000px;
   margin-top: 50px;
-  padding: 0px auto;
 
   @media (min-width: 1024px) {
     display: grid;
@@ -76,16 +77,21 @@ export const Container = styled.div`
 export const IconsContainer = styled.div`
   display: flex;
   max-width: 580px;
-  width: 100%;
-  min-width: 320px;
+  width: 90%;
+  min-width: 270px;
   height: 100px;
-  top: 20%;
+  top: 25%;
   justify-self: center;
   justify-content: space-around;
   position: absolute;
 
-  @media (max-width: 374px) {
-    top: 18px;
+  @media (min-width: 374px) {
+    top: 20px;
+    max-width: 390px;
+  }
+
+  @media (min-width: 1024px) {
+    top: 20%;
   }
 `;
 export const Icon = styled.img`

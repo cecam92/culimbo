@@ -8,5 +8,9 @@ export const Container = styled.div`
   max-width: 1100px;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 75px;
+
+  @media (min-width: 550px) {
+    margin-bottom: 75px;
+  }
 `;

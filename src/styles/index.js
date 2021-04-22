@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 
 export const Title = styled.h2`
   margin: 20px 0px;
+  align-self: flex-start;
 `;
 export const Button = styled.button`
   width: 140px;
@@ -23,7 +24,11 @@ export const Button = styled.button`
 
 export const Information = styled.p`
   width: 100%;
-  max-width: 1000px;
+  /* max-width: 1000px;
+  margin: 0px auto;
+  @media (min-width: 370px) {
+    width: 100%;
+  } */
 `;
 export const Container = styled.div`
   display: flex;

@@ -29,7 +29,6 @@ const Project = ({ data, desktop }) => {
         return (
           <Container key={index}>
             <Title>{title}</Title>
-            {/* {desktop && <Image name={pictureLg} large />} */}
             {!desktop ? <Image name={pictureSm} /> : null}
             {desktop ? (
               <Image name={pictureLg || pictureSm} large={pictureLg} />

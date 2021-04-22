@@ -76,8 +76,9 @@ export default function Home() {
                 <div style={{ maxWidth: "1000px", margin: "0px auto" }}>
                   <Nav desktop={isDesktop} />
                   <About />
-                  <Separator desktop={isDesktop} />
+                  <Separator desktop={isDesktop} decor />
                   <Portfolio desktop={isDesktop} />
+                  <Separator desktop={isDesktop} decor />
                   <Technologies />
                 </div>
                 <Footer />

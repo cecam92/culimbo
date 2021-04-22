@@ -4,7 +4,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 70px;
+  width: 90%;
+  margin: 0px auto;
+  max-width: 1100px;
 `;
 
 export const IconsContainer = styled.div`

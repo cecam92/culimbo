@@ -9,7 +9,11 @@ export const Container = styled.div`
   padding-top: 80px;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 0px auto;
+
+  @media (min-width: 550px) {
+    margin-bottom: 40px;
+  }
 
   @media (min-width: 1024px) {
     display: grid;
@@ -19,6 +23,7 @@ export const Container = styled.div`
     align-items: center;
     column-gap: 50px;
     padding-top: 150px;
+    margin-bottom: 40px;
   }
   & ${Title} {
     grid-column-start: 2;
