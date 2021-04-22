@@ -9,6 +9,8 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 90%;
+  margin: 0px auto;
 `;
 
 export const ContainerDescription = styled.div`
@@ -23,14 +25,14 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   min-width: 320px;
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
   margin-top: 50px;
 
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 400px 500px;
-    grid-template-rows: 100px 300px 120px auto auto;
+    grid-template-rows: 100px 350px 120px auto auto;
     ${Title} {
       grid-column-start: 1;
       grid-column-end: 2;
