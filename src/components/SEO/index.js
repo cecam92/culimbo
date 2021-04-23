@@ -110,9 +110,10 @@ function SEO({
 }
 
 SEO.defaultProps = {
-  lang: `es`,
+  lang: `en`,
   meta: [],
-  description: ``,
+  description: `Cesar Martinez Porfolio`,
+  title: `Portfolio`,
 };
 
 SEO.propTypes = {
