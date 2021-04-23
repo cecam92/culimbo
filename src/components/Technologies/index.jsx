@@ -4,8 +4,8 @@ import {
   Container,
   IconsContainer,
   TechContainer,
-  Image,
   Text,
+  Image,
 } from "./styles";
 
 import Techs from "../../technologiesData";
