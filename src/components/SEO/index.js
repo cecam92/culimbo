@@ -18,6 +18,7 @@ function SEO({
   image,
   keywords,
   twitterUsername,
+  url,
 }) {
   const { site } = useStaticQuery(
     graphql`
@@ -27,7 +28,7 @@ function SEO({
             title
             description
             author
-            url
+            siteUrl
             image
             twitterUsername
           }
@@ -36,6 +37,7 @@ function SEO({
     `
   );
   const metaTitle = title || site.siteMetadata.title;
+  const metaUrl = url || site.siteMetadata.siteUrl;
 
   const metaDescription = description || site.siteMetadata.description;
   const metaAuthor = author || site.siteMetadata.author;
@@ -68,6 +70,10 @@ function SEO({
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:url`,
+          content: metaUrl,
         },
         {
           property: `og:author`,
