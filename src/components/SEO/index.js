@@ -10,7 +10,15 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({
+  description,
+  lang,
+  title,
+  author,
+  image,
+  keywords,
+  twitterUsername,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,13 +27,27 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            url
+            image
+            twitterUsername
           }
         }
       }
     `
   );
+  const metaTitle = title || site.siteMetadata.title;
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaAuthor = author || site.siteMetadata.author;
+  const metaImage = image || site.siteMetadata.image;
+  const metaTwitterUsername =
+    twitterUsername || site.siteMetadata.twitterUsername;
+  const metaKeywords = keywords || [
+    "cesar martinez",
+    "web developer",
+    "culimbo",
+    "mobile developer",
+  ];
 
   return (
     <Helmet
@@ -41,15 +63,23 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
           content: metaDescription,
         },
         {
+          property: `og:author`,
+          content: metaAuthor,
+        },
+        {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          name: `og:image`,
+          content: metaImage,
         },
         {
           name: `twitter:card`,
@@ -57,17 +87,24 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: metaTwitterUsername,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(
+        metaKeywords && metaKeywords.length > 0
+          ? {
+              name: `keywords`,
+              content: metaKeywords.join(`, `),
+            }
+          : []
+      )}
     />
   );
 }
@@ -82,7 +119,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 export default SEO;

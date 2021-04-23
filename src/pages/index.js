@@ -6,6 +6,7 @@ import Separator from "../components/Separator";
 import Portfolio from "../components/Portfolio";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import { useSpring, animated as a } from "react-spring";
 
 import { Container } from "../styles";
@@ -67,6 +68,7 @@ export default function Home() {
 
   return (
     <>
+      <SEO />
       <Header data={data} />
       <div>
         <a.div style={fadeProps}>

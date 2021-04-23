@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Cesar Martinez`,
     description: `Cesar Martinez Portfolio`,
-    author: `@cecam92`,
+    author: `Cesar Martinez`,
+    url: "https://culimbo.com",
+    image: "/me.png",
+    twitterUsername: "@cecam92",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
