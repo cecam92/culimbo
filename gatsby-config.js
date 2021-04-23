@@ -27,6 +27,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
